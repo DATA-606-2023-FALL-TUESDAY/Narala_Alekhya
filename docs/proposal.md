@@ -20,10 +20,12 @@ Promotion of Sustainability: Emphasizing sorting and recycling fosters sustainab
 - Effectiveness of Image Classification: How effectively can machine learning models classify household garbage into the 12 categories based on the provided dataset?
 
 - Real-world Application: How can the results of this classification be implemented in a real-world garbage sorting facility? What challenges might arise in a real-world setting compared to a controlled dataset?
-
-- Potential for Expansion: Are there other categories of household waste that could be added to this dataset to make it more comprehensive? How would the addition of these categories influence the classification process?
+  
+- Image Resolution and Classification: Does the resolution(size) or quality of an image affect the accuracy of classification algorithms?
 
 - Impact of Image Quality and Variation: How does the quality and variety of images (e.g., images of new clothes vs. discarded clothes) affect the classification accuracy?
+
+- Transfer Learning: Can pre-trained models(eg. VGG16, ResNet)be fine-tuned to achieve better classification performance on this Dataset?
 
 By addressing these research questions, one can gain a deeper understanding of the potential and challenges of using image classification techniques in the realm of waste management and recycling.
 
