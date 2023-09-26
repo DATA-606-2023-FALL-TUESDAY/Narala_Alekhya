@@ -41,10 +41,8 @@ Describe the datasets you are using to answer your research questions.
   | Image_ID | Integer  | Unique identifier for each image       | 1,2,3,...,15150           |
   | Image | Object     | The actual image data or path to the image       | File paths or image objects          |
   | Category          | String       | Type of garbage depicted in the image        | paper, cardboard, biological, metal, plastic, green-glass, brown-glass, white-glass, clothes, shoes, batteries, trash              |
-  | Source | String     | Indicates where the image was obtained from       | Web scraping, Clothing dataset, Garbage Classification dataset           |
   | Image_Size | Integer     | The size of the image       | Values in KB/MB, e.g., 500KB, 2MB           |
 - Target/label for ML model: Category: This is the column that indicates the type of garbage, and it will be the primary target for classification tasks.
 - Features/predictors for your ML models:
   - Image: This is the primary feature. The raw pixel data or processed features extracted from the images will be used to train the classification model.
   - Image_Size: Depending on the nature of the images, the size might provide some hints. For instance, high-resolution images of clothes might be larger than those of small items like   batteries.
-  - Source: It's possible that images from certain sources might have specific characteristics (like watermarks, consistent lighting, or backgrounds) that could be relevant. However, this feature should be used with caution as it might introduce bias into the model.
