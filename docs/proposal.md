@@ -19,8 +19,6 @@ Promotion of Sustainability: Emphasizing sorting and recycling fosters sustainab
 
 - Effectiveness of Image Classification: How effectively can machine learning models classify household garbage into the 12 categories based on the provided dataset?
 
-- Influence of Image Source: Given that the images come from various sources (e.g., web scraping, and other datasets), how does the source of the image influence the accuracy of classification?
-
 - Real-world Application: How can the results of this classification be implemented in a real-world garbage sorting facility? What challenges might arise in a real-world setting compared to a controlled dataset?
 
 - Potential for Expansion: Are there other categories of household waste that could be added to this dataset to make it more comprehensive? How would the addition of these categories influence the classification process?
