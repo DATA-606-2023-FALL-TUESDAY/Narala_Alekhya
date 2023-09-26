@@ -11,8 +11,11 @@
 **What is it about?** - The topic revolves around the classification of household garbage into various categories, with the primary objective of improving and optimizing the recycling process. The dataset in question has images from 12 distinct categories of household waste, ranging from everyday items like paper and plastic to more specific items like clothes, shoes, and batteries. These images were largely sourced through web scraping, with some being borrowed from existing datasets.
 
 **Why does it matter?** - Environmental Impact: Proper recycling reduces the need for raw material extraction, minimizing environmental degradation and harmful emissions from landfills and incinerators.
+
 Waste Management Efficiency: Correctly categorized waste streamlines recycling processes, ensuring materials are recycled effectively without contamination.
+
 Economic Benefits: Efficient recycling can lead to cost savings and potential revenue generation from recyclable materials.
+
 Promotion of Sustainability: Emphasizing sorting and recycling fosters sustainable living habits, leading to reduced consumption and responsible waste disposal.
 
 **Research questions** -
