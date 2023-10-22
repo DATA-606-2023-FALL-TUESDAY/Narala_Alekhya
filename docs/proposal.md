@@ -49,3 +49,35 @@ Describe the datasets you are using to answer your research questions.
 - Features/predictors for your ML models:
   - Image: This is the primary feature. The raw pixel data or processed features extracted from the images will be used to train the classification model.
   - Image_Size: Depending on the nature of the images, the size might provide some hints. For instance, high-resolution images of clothes might be larger than those of small items like   batteries.
+ 
+## 4. Exploratory Data Analysis(EDA)
+### Data Cleansing and Preparation:
+
+- Data Extraction and Directory Structure:
+The dataset was obtained by unzipping the "Project_A.zip" file, which contained image files.
+The directory structure was analyzed using os.walk(), filtering and collecting image files with the '.jpg' extension.
+Labels (garbage categories) were extracted from directory names, associating each image with its category.
+
+- Data Organization:
+The collected data was structured into a Pandas DataFrame named 'df,' comprising two essential columns: 'image_path' (storing file paths) and 'label' (representing category labels).
+
+### Visualizations and Interpretations:
+
+- Category and Image Size Analysis:
+  
+  The code included visualizations to explore the dataset further:
+
+    A scatter plot to examine the relationship between 'image_size' and 'category.'
+  
+    A box plot to visualize the distribution of image sizes across different garbage categories.
+
+    A pie chart to illustrate the distribution of garbage categories.
+
+    A violin plot to showcase the distribution of image sizes by garbage category.
+
+  <img src="">
+
+
+- Image Visualization:
+  A function was defined to display both the original and resized images for specific image IDs.
+  Sample images were displayed for visual inspection.
