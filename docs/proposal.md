@@ -75,7 +75,8 @@ The collected data was structured into a Pandas DataFrame named 'df,' comprising
 
     A violin plot to showcase the distribution of image sizes by garbage category.
 
-  <img src="">
+  <img src="https://github.com/AlekhyaNarala28/hi/blob/main/newplot.png">
+  <img src="https://github.com/AlekhyaNarala28/hi/blob/main/newplot%20(1).png">
 
 
 - Image Visualization:
