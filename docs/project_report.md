@@ -82,3 +82,71 @@ The collected data was structured into a Pandas DataFrame named 'df,' comprising
 - Image Visualization:
   A function was defined to display both the original and resized images for specific image IDs.
   Sample images were displayed for visual inspection.
+
+## 5. Model Training 
+
+- We will be using the following deep-learning models for predictive analytics in the project:
+
+  VGG16
+  VGG19
+  DenseNet
+  Resnet50
+  
+  These models are commonly used for image classification tasks and are known for their effectiveness in learning complex patterns in large datasets.
+- Generally, datasets are split into a training set and a testing set. I used the 80/20 ratio in this project.
+- Some Python packages I used in the project: TensorFlow and Keras are used for building and training the deep-learning models. Other supportive packages I used are NumPy and Pandas,
+  which are used for data manipulation. Also, Plotly and Seaborn are used for data visualization.
+- The development environments I used are my Macbook, Google CoLab, and VSCode. 
+- I measured and compared the performance of the models by the following metrics:
+
+  Accuracy: The most straightforward metric, measuring the percentage of correctly classified images.
+
+  Loss Function: This includes categorical cross-entropy loss for multi-class classification tasks, which is a common choice for these models.
+
+## 6. Application of the Trained Models
+
+I developed a web app for people to interact with the trained models. A potential tool for web app development I used is: Flask
+
+## 7. Conclusion
+
+- Summary of Work and Its Potential Application
+
+  Project Focus: The project involves developing a machine-learning model for classifying garbage images into different categories.
+
+  Data Preparation and EDA: The work includes collecting image data, constructing a data frame, resizing images, and performing exploratory data analysis (EDA). Tools like Plotly Express    were used for visualizing the data.
+
+  Model Training and Testing: Various deep learning models like VGG16, VGG19, DenseNet, and Resnet50 were explored for image classification.
+
+  Application: This project has significant potential in waste management and recycling, where accurate classification of waste types is crucial for effective sorting and recycling       
+  processes.
+
+- Limitations of the Work
+
+  Data Quality and Diversity: There is a limitation related to the quality and diversity of the image data collected.
+
+  Model Complexity and Resource Intensity: Deep learning models like Resnet50 and DenseNet, are resource-intensive and require substantial computational power.
+
+  Generalization: The model's ability to generalize to different types of garbage images not included in the training set could be limited.
+
+- Lessons Learned
+
+  Importance of Data Preprocessing: The crucial role that data cleaning and preparation play in the success of a machine learning project.
+
+  Model Selection: Insights into the strengths and weaknesses of different deep learning architectures for image classification tasks.
+
+- Future Research Direction
+
+  Data Augmentation: Exploring data augmentation techniques to increase the diversity of the training dataset, potentially improving the model's ability to generalize.
+
+  Real-world Testing: Applying the models in real-world scenarios for further validation and to understand practical challenges.
+
+  This overview provides a high-level understanding of my project, its value, the challenges faced, and where you might take this research in the future.
+
+## 8. References 
+
+  List articles, blogs, and websites that I have referenced in the project.
+
+  https://dl.acm.org/doi/fullHtml/10.1145/3574318.3574345
+
+  https://medium.com/analytics-vidhya/image-classification-with-vgg-convolutional-neural-network-using-keras-for-beginners-61767950c5dd
+
