@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Garbage Classifier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+  <style>
+body{
+      background-color: #E9F3FE;
+    }
+
+.rbtn{
+      display: none;
+    }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+.App,
+.main,
+.instructions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: #E9F3FE;
+  flex-direction: column;
+}
+
+.main {
+  width: 60%;
+  height: 60%;
+  box-shadow: 5px 5px 15px 1px rgba(141, 172, 207, 0.7); 
+  background-color: #FEFEFE;
+  border-radius: 30px;
+  flex-direction: column;
+  gap: 3%;
+}
+
+.image-preview {
+  border: 2px dashed #82AAE3;
+  border-radius: 30px;
+  width: 90%;
+  height: 75%;
+}
+
+.after-image-upload {
+  width: 99%;
+  height: 99%;
+  object-fit: contain;
+}
+
+.instructions {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 4%;
+}
+
+.upload_garbage {
+  width: 25%;
+  max-width: 60%;
+}
+
+.rbtn{
+  display: none;
+  width: 15%;
+  height: 7%;
+  margin-top: 3%;
+  font-size: larger;
+  background-color: #0174BE;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  border-color: transparent;
+  cursor: pointer;
+}
+.input{
+  position: relative;
+  display: inline-block;
+}
+
+.LoadingImage{
+  position: absolute;
+  margin-bottom: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+}
+.Loading{
+  margin-bottom: 150%;
+ }
+.rbtn{
+  display: none;
+}
+
+ @media (min-width: 450px) and (max-width: 1200px){
+  h2{
+    font-size: xx-large;
+  }
+
+  .button-hidden,.button-visible{
+   width: 50%;  
+   font-size: 30px;
+  }
+  .image-preview{
+   width: 80%;
+   display: flex;
+   align-items: center;
+  }
+  .after-image-upload {
+   width: 80%;
+   height: 80%;
+   padding-left: 10%;
+  
+  }
+  .main{
+
+   height: 40%;
+   width: 75%;
+  }
+  .Loading{
+   height: 300px;
+   width: 300px;
+   margin-bottom: 150%;
+  }
+  .description{
+    display: none;
+   }
+   
+   .upload{
+  width:"20%";
+  height:"50%";
+}
+ }
+
+@media (max-width: 550px){
+     h1,h2{
+       font-size: medium;   
+     }
+     .button-hidden,.button-visible{
+      font-size: small; 
+      width: 30%;  
+     }
+     .image-preview{
+      width: 80%;
+      display: flex;
+      align-items: center;
+     }
+     .after-image-upload {
+      width: 80%;
+      height: 80%;
+      padding-left: 10%;
+     }
+     .main{
+   
+      height: 40%;
+      width: 75%;
+     }
+     .Loading{
+      height: 100px;
+      width: 100px;
+      margin-bottom: 60%;
+     }
+     .description{
+      display: none;
+     }}
+     .Loading{
+      display: none;
+     }
+  </style>
+</head>
+<body>
+  <div class="App">
+    <div style="display:block; padding-bottom: 3%">
+      <h1 style="color:#0174BE; ">GARBAGE CLASSIFIER</h1>
+    </div>
+    <div class="main">
+      <div class="image-preview preview">
+        <div class='instructions'>
+          
+          <img src="{{url_for('static',filename='images/upload_image.jpg')}}" id="upload_Image" name="Garbage_image" alt='upload_Image' class='upload upload_garbage'/>
+          <h1 class="description" style="color: #3498DB">Drop your image here</h1>
+          <p class='description' style="color:#9DB2BF">Supports : JPG, JPEG2000, PNG</p>
+        </div>
+      </div>
+      <div class="input">
+        <div class='LoadingImage'><img src="{{url_for('static',filename='images/loading.gif')}}" alt='loadingIcon' class='Loading' alt='loading'/></div>
+        <input type="file" name="image" id="image-uploader" accept="image/*" style="display: none;" />
+      </div>
+      <h2 class="predict" style="color: #82AAE3;"></h2>
+    </div>
+    <button class="rbtn preview button-hidden">Reupload</button>
+  </div>
+  <script>
+  const input = document.querySelector('input');
+  const images = document.querySelectorAll('.preview');
+  for (const image of images) {
+    image.addEventListener('click', () => {
+    input.click();
+  });}
+
+  const fileInput = document.getElementById('image-uploader');
+   function hideDescription() {
+     const descriptionElements = document.querySelectorAll('.description');
+       for (const descriptionElement of descriptionElements) {
+       descriptionElement.style.display = 'none';
+      }
+    }
+    function showReuploadButton() {
+      const reuploadButton = document.querySelector('.rbtn');
+      reuploadButton.style.display = 'block';
+    }
+  fileInput.addEventListener('change', async function () {
+  const divElement = document.querySelector('.predict');
+  divElement.style.display = "none";
+
+  var file = this.files[0];
+ 
+  console.log('Image selected');
+  hideDescription();
+  showReuploadButton();
+
+  const reader = new FileReader();
+  reader.onload = function() {
+    const dataURL = reader.result;
+    const imageElement = document.querySelector('.upload');
+    console.log(imageElement)
+    imageElement.src = dataURL;
+    imageElement.classList.add('after-image-upload');
+    imageElement.classList.remove('upload_garbage');
+
+  };
+  reader.readAsDataURL(file);
+  var formData = new FormData();
+
+  formData.append('Garbage_image', file);
+  const Loading = document.querySelector('.Loading');
+  Loading.style.display = 'block'
+
+  const response = await fetch('/upload', {
+    method: 'POST',
+    body: formData,
+  }).then(response => {
+        console.log(response)
+        if(!response.ok) {
+          throw new Error('Server Error'); 
+        }return response.json()}).then(data =>{
+        const Garbage = data;
+        const divElement = document.querySelector('.predict');
+        divElement.style.display = "block";
+        divElement.textContent = Garbage['predict'];
+        
+  })
+  Loading.style.display = 'none'
+});</script>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  
+  
+</body>
+</html>
