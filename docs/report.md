@@ -3,7 +3,7 @@
 ## 1. Proposal Title: Household Garbage Classification for Recycling
 - **Author Name** - Narala Alekhya
 - Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
-- [GitHub](https://github.com/DATA-606-2023-FALL-TUESDAY/Narala_Alekhya/tree/main)
+- [GitHub] (https://github.com/AlekhyaNarala28?tab=repositories)
 - [LinkedIn](linkedin.com/in/alekhyanarala)
 - Link to your PowerPoint presentation file - (https://github.com/DATA-606-2023-FALL-TUESDAY/Narala_Alekhya/blob/main/docs/Garbage_Classification.pptx)
 - Link to your YouTube video - https://youtu.be/z02oobgKhJY
