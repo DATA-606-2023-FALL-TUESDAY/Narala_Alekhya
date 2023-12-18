@@ -5,8 +5,8 @@
 - Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
 - [GitHub](https://github.com/AlekhyaNarala28?tab=repositories)
 - [LinkedIn](linkedin.com/in/alekhyanarala)
-- Link to your PowerPoint presentation file (https://github.com/DATA-606-2023-FALL-TUESDAY/Narala_Alekhya/blob/main/docs/Garbage_Classification.pptx)
-- Link to your YouTube video - https://youtu.be/z02oobgKhJY
+- [presentation](https://github.com/DATA-606-2023-FALL-TUESDAY/Narala_Alekhya/blob/main/docs/Garbage_Classification.pptx)
+- [YouTube video](https://youtu.be/z02oobgKhJY)
 
 ## 2. Background
 **What is it about?** - The topic revolves around the classification of household garbage into various categories, with the primary objective of improving and optimizing the recycling process. The dataset in question has images from 12 distinct categories of household waste, ranging from everyday items like paper and plastic to more specific items like clothes, shoes, and batteries. These images were largely sourced through web scraping, with some being borrowed from existing datasets.
