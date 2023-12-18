@@ -4,7 +4,7 @@
 - Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
 - [GitHub](https://github.com/AlekhyaNarala28)
 - [LinkedIn](linkedin.com/in/alekhyanarala)
-- Link to your PowerPoint presentation file - in progress
+- Link to your PowerPoint presentation file - (https://github.com/DATA-606-2023-FALL-TUESDAY/Narala_Alekhya/blob/main/docs/Garbage_Classification.pptx)
 - Link to your YouTube video - https://youtu.be/z02oobgKhJY
 
 ## 2. Background
