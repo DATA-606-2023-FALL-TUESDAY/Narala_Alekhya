@@ -1,4 +1,5 @@
 # DATA606 - Capstone Project Proposal
+# Alekhya Narala, 3rd Sem DS
 ## 1. Proposal Title: Household Garbage Classification for Recycling
 - **Author Name** - Narala Alekhya
 - Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
